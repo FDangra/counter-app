@@ -20,6 +20,8 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
+    this.count = 0;
+
     this.title = "";
     this.t = this.t || {};
     this.t = {
@@ -57,8 +59,8 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
       }
-      h3 span {
-        font-size: var(--counter-app-label-font-size, var(--ddd-font-size-s));
+      .counter {
+        font-size: var(--counter-app-label-font-size, var(--ddd-font-size-xxl));
       }
     `];
   }
