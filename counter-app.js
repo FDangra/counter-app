@@ -39,7 +39,7 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
   static get properties() {
     return {
       ...super.properties,
-      title: { type: String },
+      title: { type: Number, refelect: true },
     };
   }
 
@@ -66,10 +66,22 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
   // Lit render the HTML
   render() {
     return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
-</div>`;
+      <div class="wrappper">
+      <div class="counter">${this.count}</div>
+      <div class="buttons">
+        <button> @click="${this.decrease}">-1</button>
+        <button> @click="${this.increase}">+1</button>
+      `;
+  }
+
+  increase(){
+    this.count++;
+  }
+  decrease(){
+    this.count--;
+  }
+  reset(){
+    this.count = 0;
   }
 
   /**
