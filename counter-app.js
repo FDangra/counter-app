@@ -41,8 +41,7 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
   static get properties() {
     return {
       ...super.properties,
-      count: { type: Number},
-      title: { type: Number, refelect: true },
+      count: { type: Number, refelect: true},
     };
   }
 
@@ -55,6 +54,14 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
+      }
+      :host([count="18"]) {
+        color: var(--ddd-theme-default-athertonViolet
+        );
+      }
+      :host([count="21"]) {
+        color: var(--ddd-theme-default-wonderPurple
+        );
       }
       .wrapper {
         margin: var(--ddd-spacing-2);
