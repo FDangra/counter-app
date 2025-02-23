@@ -63,6 +63,12 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       :host([count="21"]) {
         color: var(--ddd-theme-default-wonderPurple);
       }
+      :host([count="10"]) {
+        color: var(--ddd-theme-default-futureLime);
+      }
+      :host([count="25"]) {
+        color: var(--ddd-theme-default-inventOrange);
+      }
       .wrapper {
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
